@@ -4,6 +4,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import './styles/App.css';
 import { ToastContainer } from 'react-toastify';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { initializeCodeProtection } from './utils/codeProtection';
 
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
@@ -28,6 +30,10 @@ function HomePage() {
 }
 
 function App() {
+  useEffect(() => {
+    initializeCodeProtection();
+  }, []);
+
   return (
     <Router>
       <div className="app-container">
