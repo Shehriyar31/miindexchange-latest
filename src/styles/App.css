@@ -1364,6 +1364,59 @@ body {
   }
 }
 
+/* Custom VIP Cursor */
+* {
+  cursor: none !important;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #7928ca, #ff0080);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  transition: all 0.1s ease;
+  box-shadow: 0 0 20px rgba(121, 40, 202, 0.6);
+}
+
+.custom-cursor::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(121, 40, 202, 0.3);
+  border-radius: 50%;
+  animation: cursorPulse 2s ease-in-out infinite;
+}
+
+.custom-cursor.hover {
+  transform: scale(1.5);
+  background: linear-gradient(45deg, #ff0080, #7928ca);
+  box-shadow: 0 0 30px rgba(255, 0, 128, 0.8);
+}
+
+.custom-cursor.click {
+  transform: scale(0.8);
+  background: linear-gradient(45deg, #ffffff, #7928ca);
+}
+
+@keyframes cursorPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.1;
+  }
+}
+
 /* Code Protection Styles */
 body {
   -webkit-user-select: none;

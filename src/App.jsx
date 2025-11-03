@@ -15,10 +15,12 @@ import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
 import Preloader from './components/Preloader';
+import CustomCursor from './components/CustomCursor';
 
 function HomePage() {
   return (
     <>
+      <CustomCursor />
       <Preloader />
       <Header />
       <HeroSection />
