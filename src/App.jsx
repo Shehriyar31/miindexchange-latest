@@ -3,7 +3,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'react-toastify/dist/ReactToastify.css';
 import './styles/App.css';
 import { ToastContainer } from 'react-toastify';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import { useEffect } from 'react';
 import { initializeCodeProtection } from './utils/codeProtection';
 
@@ -16,11 +16,14 @@ import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
 import Preloader from './components/Preloader';
 import CustomCursor from './components/CustomCursor';
-import NotFound from './components/error/NotFound';
 
-function HomePage() {
+function App() {
+  useEffect(() => {
+    initializeCodeProtection();
+  }, []);
+
   return (
-    <>
+    <div className="app-container">
       <CustomCursor />
       <Preloader />
       <Header />
@@ -30,37 +33,19 @@ function HomePage() {
       <ContactForm />
       <Footer />
       <WhatsAppFloat />
-    </>
-  );
-}
-
-function App() {
-  useEffect(() => {
-    initializeCodeProtection();
-  }, []);
-
-  return (
-    <Router>
-      <div className="app-container">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/404" element={<NotFound />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="dark"
-        />
-      </div>
-    </Router>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
+    </div>
   );
 }
 
