@@ -20,6 +20,14 @@ import CustomCursor from './components/CustomCursor';
 function App() {
   useEffect(() => {
     initializeCodeProtection();
+    
+    // Auto redirect to main domain
+    const currentDomain = window.location.hostname;
+    const mainDomain = '1mindexch.com';
+    
+    if (currentDomain !== mainDomain && currentDomain !== 'localhost' && currentDomain !== '127.0.0.1') {
+      window.location.replace(`https://${mainDomain}`);
+    }
   }, []);
 
   return (
