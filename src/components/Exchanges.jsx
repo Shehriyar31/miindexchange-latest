@@ -58,7 +58,7 @@ function Exchanges() {
             Get Master, Agent & Admin Accounts
           </p>
           <h2 className="section-title">Premium Exchanges</h2>
-          <p style={{color: '#666', maxWidth: '600px', margin: '0 auto'}}>
+          <p className="section-description">
             At 1MindExch we are providing all kind of Master & Super Master Accounts! Our sports betting exchange
             master accounts make your betting business easy.
           </p>

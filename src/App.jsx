@@ -14,10 +14,12 @@ import Exchanges from './components/Exchanges';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
+import Preloader from './components/Preloader';
 
 function HomePage() {
   return (
     <>
+      <Preloader />
       <Header />
       <HeroSection />
       <Services />
