@@ -1789,6 +1789,23 @@ body {
   }
 }
 
+/* Navbar Responsive Center */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    text-align: center;
+  }
+  
+  .navbar-nav {
+    margin: 0 auto;
+    float: none;
+  }
+  
+  .navbar-nav .nav-link {
+    display: inline-block;
+    margin: 10px 20px;
+  }
+}
+
 /* Footer Mobile Responsive */
 @media (max-width: 768px) {
   .footer-section {
