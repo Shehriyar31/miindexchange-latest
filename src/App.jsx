@@ -42,9 +42,9 @@ function App() {
     <Router>
       <div className="app-container">
         <Routes>
-          <Route path="/" element={<Navigate to="/1MindExchange/Home" replace />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/1MindExchange/Home" element={<HomePage />} />
-          <Route path="*" element={<Navigate to="/1MindExchange/Home" replace />} />
+          <Route path="*" element={<HomePage />} />
         </Routes>
         <ToastContainer
           position="top-right"
