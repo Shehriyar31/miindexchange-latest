@@ -3,7 +3,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'react-toastify/dist/ReactToastify.css';
 import './styles/App.css';
 import { ToastContainer } from 'react-toastify';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
 import { initializeCodeProtection } from './utils/codeProtection';
 
@@ -16,6 +16,7 @@ import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
 import Preloader from './components/Preloader';
 import CustomCursor from './components/CustomCursor';
+import NotFound from './components/error/NotFound';
 
 function HomePage() {
   return (
@@ -43,8 +44,7 @@ function App() {
       <div className="app-container">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/1MindExchange/Home" element={<HomePage />} />
-          <Route path="*" element={<HomePage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <ToastContainer
           position="top-right"

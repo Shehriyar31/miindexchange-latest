@@ -12,16 +12,16 @@ function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="/1MindExchange/Home#home" className="text-light">
+            <Nav.Link href="#home" className="text-light">
               Home
             </Nav.Link>
-            <Nav.Link href="/1MindExchange/Home#services" className="text-light">
+            <Nav.Link href="#services" className="text-light">
               Services
             </Nav.Link>
-            <Nav.Link href="/1MindExchange/Home#exchanges" className="text-light">
+            <Nav.Link href="#exchanges" className="text-light">
               Exchanges
             </Nav.Link>
-            <Nav.Link href="/1MindExchange/Home#contact" className="text-light">
+            <Nav.Link href="#contact" className="text-light">
               Contact
             </Nav.Link>
           </Nav>
