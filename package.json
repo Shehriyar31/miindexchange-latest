@@ -1,5 +1,5 @@
 {
-  "name": "miindexchange-latest",
+  "name": "1mindexch",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -30,7 +30,7 @@
     "globals": "^16.4.0",
     "vite": "^7.1.7"
   },
-  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "description": "1MindExch - Premium online exchange platform offering secure betting, live casino games, and sports betting with instant withdrawals and 24/7 support.",
   "main": "eslint.config.js",
   "author": "",
   "license": "ISC"
