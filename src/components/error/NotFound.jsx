@@ -25,7 +25,7 @@ function NotFound() {
               <div className="error-actions">
                 <Button 
                   className="btn-primary-custom me-3"
-                  onClick={() => window.location.href = '/'}
+                  onClick={() => window.location.replace('/')}
                 >
                   <i className="bi bi-house me-2"></i>
                   Go Home
@@ -33,7 +33,7 @@ function NotFound() {
                 
                 <Button 
                   className="btn-outline-light"
-                  onClick={() => window.history.back()}
+                  onClick={() => window.history.length > 1 ? window.history.back() : window.location.replace('/')}
                 >
                   <i className="bi bi-arrow-left me-2"></i>
                   Go Back

@@ -44,6 +44,7 @@ function App() {
       <div className="app-container">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/404" element={<NotFound />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <ToastContainer
