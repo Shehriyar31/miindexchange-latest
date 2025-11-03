@@ -3,4 +3,4 @@ Allow: /
 Disallow: /src/
 Disallow: /node_modules/
 
-Sitemap: https://e1mindexch.com/sitemap.xml
+Sitemap: https://1mindexch.com/sitemap.xml
